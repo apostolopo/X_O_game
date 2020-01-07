@@ -1,0 +1,258 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+<style>
+table
+{ border-style: groove;
+    border-width: 7px;
+    border-color: light-blue; 
+}
+button
+{ 
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+#btn2
+{
+   background-color: #008CBA;
+} 
+</style>
+<script>
+var imgArray = new Array();
+imgArray[0] = new Image();
+imgArray[0].src = "logo-null-final.png";
+
+imgArray[1] = new Image();
+imgArray[1].src ="X.png";
+
+imgArray[2] = new Image();
+imgArray[2].src = "favicon.png";
+var k=0;
+var countx=0;
+var county=0;
+function change(c)
+
+{ 
+
+  if(document.getElementById(c).src == imgArray[0].src )
+  {
+  if(k==0)
+  {
+  
+   document.getElementById(c).src="X.png";
+   k=1;
+  }
+  else
+  {
+    
+	document.getElementById(c).src="favicon.png";
+	k=0;
+  }
+ }
+ if( document.getElementById('t11').src!=imgArray[0].src && document.getElementById('t11').src == document.getElementById('t12').src && document.getElementById('t11').src==document.getElementById('t13').src)
+ { 
+    
+
+	if(document.getElementById('t11').src==imgArray[1].src )
+	{ 
+	document.getElementById('msg').innerHTML="Winner is <img src='X.png'> <span onclick='fun1()'>[x]</span>";
+	document.getElementById('msg').style.display="block";
+	
+	  alert("WIN X");
+	 countx++;
+	}
+    else
+	{
+	 alert("WIN O");
+       county++;}
+	   clear1();
+ }
+   if( document.getElementById('t21').src!=imgArray[0].src && document.getElementById('t21').src==document.getElementById('t22').src && document.getElementById('t21').src==document.getElementById('t23').src)
+ { 
+   	if(document.getElementById('t21').src==imgArray[1].src )
+	{ 
+	  alert("WIN X");
+	 countx++;
+	}
+    else
+	{
+	 alert("WIN O");
+       county++;}
+	   clear1();
+ }
+  if( document.getElementById('t31').src!=imgArray[0].src && document.getElementById('t31').src==document.getElementById('t32').src && document.getElementById('t31').src==document.getElementById('t33').src)
+ { 
+  	if(document.getElementById('t31').src==imgArray[1].src )
+	{ 
+	 alert("WIN X");
+	 countx++;
+	}
+    else
+	{
+	 alert("WIN O");
+       county++;}
+	   clear1();
+ }
+ 
+ if( document.getElementById('t11').src!=imgArray[0].src && document.getElementById('t11').src == document.getElementById('t21').src && document.getElementById('t11').src==document.getElementById('t31').src)
+ { 
+    
+
+	if(document.getElementById('t11').src==imgArray[1].src )
+	{ 
+	  alert("WIN X");
+	 countx++;
+	}
+    else
+	{
+	 alert("WIN O");
+       county++;}
+	   clear1();
+ }
+   if( document.getElementById('t12').src!=imgArray[0].src && document.getElementById('t12').src==document.getElementById('t22').src && document.getElementById('t12').src==document.getElementById('t32').src)
+ { 
+   	if(document.getElementById('t12').src==imgArray[1].src )
+	{ 
+	  alert("WIN X");
+	 countx++;
+	}
+    else
+	{
+	 alert("WIN O");
+       county++;}
+	   clear1();
+ }
+  if( document.getElementById('t13').src!=imgArray[0].src && document.getElementById('t13').src==document.getElementById('t23').src && document.getElementById('t13').src==document.getElementById('t33').src)
+ { 
+  	if(document.getElementById('t13').src==imgArray[1].src )
+	{ 
+	 alert("WIN X");
+	 countx++;
+	}
+    else
+	{
+	 alert("WIN O");
+       county++;}
+	   clear1();
+ }
+ 
+  if( document.getElementById('t11').src!=imgArray[0].src && document.getElementById('t11').src==document.getElementById('t22').src && document.getElementById('t11').src==document.getElementById('t33').src)
+ { 
+  	if(document.getElementById('t11').src==imgArray[1].src )
+	{ 
+	 alert("WIN X");
+	 
+	 countx++;
+	}
+    else
+	{
+	 alert("WIN O");
+       county++;}
+	   clear1();
+ }
+    if( document.getElementById('t13').src!=imgArray[0].src && document.getElementById('t13').src==document.getElementById('t22').src && document.getElementById('t13').src==document.getElementById('t31').src)
+ { 
+   	if(document.getElementById('t13').src==imgArray[1].src )
+	{ 
+	  alert("WIN X");
+	 countx++;
+	}
+    else
+	{
+	 alert("WIN O");
+       county++;}
+	   clear1();
+ }
+ 
+
+
+}
+	
+
+
+function fun1()
+	{
+	   document.getElementById('msg').style.display="none";
+	}	
+	
+	
+function score()
+{
+ if(countx>county)
+ {
+ alert("The winner is: "+"X with score :"+countx+"-"+county);
+ }
+ else if(countx<county)
+ {
+  alert("The winner is: "+"O with score :"+county+"-"+countx);
+ }
+ else if(countx==county)
+ {
+ alert("Is Equal");
+ }
+ 
+} 
+  function clear1()
+  {
+    document.getElementById('t11').src="logo-null-final.png";
+	document.getElementById('t12').src="logo-null-final.png";
+	document.getElementById('t13').src="logo-null-final.png";
+	document.getElementById('t21').src="logo-null-final.png";
+	document.getElementById('t22').src="logo-null-final.png";
+	document.getElementById('t23').src="logo-null-final.png";
+	document.getElementById('t31').src="logo-null-final.png";
+	document.getElementById('t32').src="logo-null-final.png";
+	document.getElementById('t33').src="logo-null-final.png";
+  }
+  function clear2()
+  {
+    document.getElementById('t11').src="logo-null-final.png";
+	document.getElementById('t12').src="logo-null-final.png";
+	document.getElementById('t13').src="logo-null-final.png";
+	document.getElementById('t21').src="logo-null-final.png";
+	document.getElementById('t22').src="logo-null-final.png";
+	document.getElementById('t23').src="logo-null-final.png";
+	document.getElementById('t31').src="logo-null-final.png";
+	document.getElementById('t32').src="logo-null-final.png";
+	document.getElementById('t33').src="logo-null-final.png";
+	countx=0;
+	county=0;
+  }
+
+</script>
+</head>
+
+<body>
+
+<table align='center'>
+<tr>
+ <td><img onclick="change('t11');" src="logo-null-final.png" id=t11 width=150></td>
+ <td><img onclick="change('t12');" src="logo-null-final.png" id=t12 width=150></td>
+ <td><img onclick="change('t13');" src="logo-null-final.png" id=t13 width=150></td>
+</tr>
+ <tr>
+ <td><img onclick="change('t21');" src="logo-null-final.png" id=t21 width=150></td>
+ <td><img onclick="change('t22');" src="logo-null-final.png" id=t22 width=150></td>
+ <td><img onclick="change('t23');" src="logo-null-final.png" id=t23 width=150></td>
+</tr>
+<tr>
+ <td><img onclick="change('t31');" src="logo-null-final.png" id=t31 width=150></td>
+ <td><img onclick="change('t32');" src="logo-null-final.png" id=t32 width=150></td>
+ <td><img onclick="change('t33');" src="logo-null-final.png" id=t33 width=150></td>
+</tr>
+</table><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<center><button onclick="clear2();" id="btn1" >Restart</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button onclick="score();" id="btn2">Score</button></center>
+<div style='display:none; position:absolute; background-color:#fff; top:100; left:35%; border-style:groove; box-shadow: 5px 10px #888888;' id=msg></div>
+
+</body>
+</html>
